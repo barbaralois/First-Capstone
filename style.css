@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  html {
+    background-color: gray;
+    padding: 5px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    line-height: 1.3;
+  }
+  
+  body {
+    background-color: lightgray;
+    padding: 5px;
+    font-size: 16px;
+    width: 90%;
+  }
+  
+  header {
+    text-align: center;
+  }
+  
+  .site-title {
+    background-color: #AFAFAF;
+  }
+  
+  .site-desc {
+    background-color: #9b9b9b;
+    padding: 6px;
+  }
+  
+  main {
+    margin: 5px 0px 2px 0px;
+  }
+  
+  section {
+    background-color: gray;
+    padding: 6px;
+    text-align: center;
+    margin: 3px 0px 3px 0px;
+  }
+  
+  h3 {
+    background-color: #AFAFAF;
+    padding: 5px;
+  }
+  
+  .box-descriptions {
+    background-color: #9b9b9b;
+    padding: 5px;
+  }
+  
+  fieldset {
+    border: 0px;
+  }
+  
+  form {
+    background-color: #AFAFAF;
+    padding: 5px;
+  }
+  
+  input {
+    padding: 2px;
+  }
+  .max-return {
+    text-align: center;
+  }
+  
+  @media screen and (min-width: 700px) {
+    body {
+      width: 85%;
+      font-size: 18px;
+    }
+  }
+  
+  @media screen and (min-width: 900px) {
+    body {
+      width: 80%;
+    }
+  
+    main {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    section {
+      width: 33%;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: space-between;
+    }
+  }
+  
+  @media screen and (min-width: 1500px) {
+    body {
+      width: 75%;
+    }
+  }

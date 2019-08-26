@@ -1,1 +1,55 @@
-A placeholder for the location of my first capstone.
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>What's for Dinner? An app to find recipes and restaurants</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="site-title">Title</h1>
+      <h2 class="site-desc">Basic description and instructions on how to use the site.</h2>
+    </header>
+    <main>
+      <section>
+        <h3>Box 1</h3>
+        <p class="box-descriptions">How to use this box to search by ingredient.</p>
+        <form>
+          <fieldset class="by-ingredient">
+            <label for="ingredient">Ingredient:</label>
+            <input type="text" id="ingredient" placeholder="Beef, corn, milk, etc."><br>
+            <label for="max-results">Load</label>
+            <input type="text" id="max-results" value="10" size=1 class="max-return"> recipes<br>
+            <input value="Go!" type="submit" class="submit-button">
+          </fieldset>
+        </form>
+      </section>
+      <section>
+        <h3>Box 2</h3>
+        <p class="box-descriptions">How to use this box to find random recipes.</p>
+        <form>
+          <fieldset class="all-random">
+            <label for="max-random">Load</label>
+            <input type="text" id="max-random" value="10" size=1 class="max-return"> recipes<br>
+            <input value="Go!" type="submit" class="submit-button">
+          </fieldset>
+        </form>
+      </section>
+      <section>
+        <h3>Box 3</h3>
+        <p class="box-descriptions">How to use this box to search nearby restaurants.</p>
+        <form>
+          <fieldset class="by-restaurant">
+            <label for="address">Address:</label>
+            <input type="text" id="address" value="corn"><br>
+            <label for="max-restaurants">Load</label>
+            <input type="text" id="max-restaurants" value="10" size=1 class="max-return"> restaurants<br>
+            <input value="Go!" type="submit" class="submit-button">
+          </fieldset>
+        </form>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
