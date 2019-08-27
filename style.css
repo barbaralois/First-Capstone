@@ -49,7 +49,11 @@ section {
   margin: 3px 0px 3px 0px;
 }
 
-.recipe-pic {
+.restaurant-name {
+  background-color: #AFAFAF;
+}
+
+.recipe-pic, .restaurant-pic {
   max-width: 50%;
 }
 
@@ -98,7 +102,7 @@ li {
   padding: 2px 0px 4px 0px;
 }
 
-.recipe-info {
+.recipe-info, .restaurant-info {
   margin-top: 6px;
 }
 
@@ -120,7 +124,7 @@ button {
     column-count: 3;
   }
 
-  .recipe-pic {
+  .recipe-pic, .restaurant-pic {
     max-width: 35%;
   }
 }
@@ -135,17 +139,17 @@ button {
     justify-content: space-between;
   }
 
-  #recipes {
+  #recipes, #restaurants {
     flex-direction: column;
   }
 
-  .recipe-info {
+  .recipe-info, .restaurant-info {
     display: flex;
     justify-content: space-between;
     flex: 1;
   }
 
-  .recipe-details {
+  .recipe-details, .resturant-details {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -159,7 +163,7 @@ button {
     justify-content: space-between;
   }
 
-  .recipe-pic {
+  .recipe-pic, .restaurant-pic {
     max-width: 30%;
   }
 }
@@ -170,7 +174,7 @@ button {
     font-size: 20px;
   }
 
-  .recipe-pic {
+  .recipe-pic, .restaurant-pic {
     max-width: 25%
   }
 }
