@@ -152,7 +152,10 @@ button {
   .recipe-details, .restaurant-details {
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;    
+  }
+
+  .restaurant-details {
     justify-content: center;
   }
 
