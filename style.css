@@ -149,7 +149,7 @@ button {
     flex: 1;
   }
 
-  .recipe-details, .resturant-details {
+  .recipe-details, .restaurant-details {
     width: 100%;
     display: flex;
     flex-direction: column;
