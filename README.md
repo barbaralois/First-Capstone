@@ -1,3 +1,3 @@
-# First-Capstone
+# First-Capstone - What's For Dinner
 
-This will house my first API Hack capstone with Thinkful, which is still a very early idea and does not have any completed sections so far.
+This will house my first API Hack capstone with Thinkful, which is currently in the early wireframing stage. The app is designed to provide you with dinner options between recipes (either random or searched by ingredient) and local restaurants.
