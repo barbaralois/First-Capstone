@@ -5,33 +5,33 @@
     <meta name="viewport" content="width=device-width">
     <title>What's for Dinner? An app to find recipes and restaurants</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
-      <h1 class="site-title">Title</h1>
-      <h2 class="site-desc">Basic description and instructions on how to use the site.</h2>
+      <h1 class="site-title">What's For Dinner?</h1>
+      <h2 class="site-desc">Welcome to What's For Dinner! Here you can search recipes by ingredient, get a list of random recipes, or find nearby restaurants. What's For Dinner will help you find some fresh answers to this age old question, whether you feel like cooking or not. Bon appétit!</h2>
+      <a href="https://barbaralois.github.io/First-Capstone/"><button type="button" alt="Reset the app and return to the first page" class="hidden">Start Over</button></a>
     </header>
     <main>
       <section class="landing-box">
-        <h3>Box 1</h3>
-        <p class="box-descriptions">How to use this box to search by ingredient.</p>
-        <p class="box-descriptions">View recipes wireframe in a new tab: <a href="https://barbaralois.github.io/First-Capstone/recipes" target="_blank">Here</a></p>
-        <form>
-          <fieldset class="by-ingredient">
+        <h3>Recipes by Ingredient</h3>
+        <p class="box-descriptions">Have an ingredient you need to use up, or do you want to see what else you can do with your favorite vegetable? Enter it below, choose the maximum number of recipes you want to see, and click go!</p>
+        <form id="ingredient-search">
+          <fieldset>
             <label for="ingredient">Ingredient:</label>
             <input type="text" id="ingredient" placeholder="Beef, corn, milk, etc." size=15><br>
             <label for="max-results">Load</label>
             <input type="text" id="max-results" value="10" size=1 class="max-return"> recipes<br>
-            <input value="Go!" type="submit" class="submit-button">
           </fieldset>
+        <input value="Go!" type="submit" class="submit-button">
         </form>
       </section>
       <section class="landing-box">
-        <h3>Box 2</h3>
-        <p class="box-descriptions">How to use this box to find random recipes.</p>
-        <p class="box-descriptions">View random recipes wireframe (same as box 1 wireframe) in a new tab: <a href="https://barbaralois.github.io/First-Capstone/recipes" target="_blank">Here</a></p>
-        <form>
-          <fieldset class="all-random">
+        <h3>Random Recipes</h3>
+        <p class="box-descriptions">Feeling adventurous or not sure where to start? Take a look at some random recipes to get the inspiration flowing and figure out what you want to make tonight. Enter how many recipes you’d like to see below, and click go!</p>
+        <form id="random-search">
+          <fieldset>
             <label for="max-random">Load</label>
             <input type="text" id="max-random" value="10" size=1 class="max-return"> recipes<br>
             <input value="Go!" type="submit" class="submit-button">
@@ -39,11 +39,10 @@
         </form>
       </section>
       <section class="landing-box">
-        <h3>Box 3</h3>
-        <p class="box-descriptions">How to use this box to search nearby restaurants.</p>
-        <p class="box-descriptions">View restaurants wireframe in a new tab: <a href="https://barbaralois.github.io/First-Capstone/restaurants" target="_blank">Here</a></p>
-        <form>
-          <fieldset class="by-restaurant">
+        <h3>Find a Restaurant</h3>
+        <p class="box-descriptions">Don’t love the idea of standing over the stove tonight? Traveling? Avoiding dishes at all costs? Whatever the reason, you can enter your address and how many restaurants you’d like to see and click go to get some nearby restaurant suggestions. Maybe you’ll find a new favorite!</p>
+        <form id="restaurant-search">
+          <fieldset>
             <label for="address">Address:</label>
             <input type="text" id="address" placeholder="1234 Main St"><br>
             <label for="max-restaurants">Load</label>

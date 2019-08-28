@@ -4,6 +4,10 @@
   margin: 0px;
 }
 
+.hidden {
+  display: none;
+}
+
 html {
   background-color: gray;
   padding: 5px;
@@ -34,7 +38,7 @@ header {
 .site-desc {
   background-color: #9b9b9b;
   padding: 6px;
-  font-size: 1.3em;
+  font-size: 1em;
   font-weight: 500;
 }
 
@@ -55,6 +59,7 @@ section {
 
 .recipe-pic, .restaurant-pic {
   max-width: 50%;
+  object-fit: scale-down;
 }
 
 h3, h4 {
@@ -92,13 +97,14 @@ ul {
 
 li {
   padding: 4px 0px 0px 0px;
+  text-align: left;
 }
 
-.recipe-title, .restaurant-title {
+.recipe-title, .restaurant-name {
   padding: 4px 0px 2px 0px;
 }
 
-.cook-time, .address, .cuisine-and-cost {
+.servings, .random-info .address, .cuisine-and-cost {
   padding: 2px 0px 4px 0px;
 }
 
@@ -139,7 +145,7 @@ button {
     justify-content: space-between;
   }
 
-  #recipes, #restaurants {
+  .recipes, .restaurants {
     flex-direction: column;
   }
 
