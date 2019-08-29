@@ -163,8 +163,7 @@ function displayRestaurants(responseJson) {
     let restaurantURL = responseJson.restaurants[i].restaurant.url;
     let restaurantAddress = responseJson.restaurants[i].restaurant.location.address;
     let restaurantCost = responseJson.restaurants[i].restaurant.average_cost_for_two;
-    let restaurantPic = responseJson.restaurants[i].restaurant.thumb;
-    //dummy image "https://dummyimage.com/500x350/000/ffffff&text=Image+Unavailable"
+    let restaurantPic = responseJson.restaurants[i].restaurant.thumb || "https://dummyimage.com/500x350/000/ffffff&text=No+Image+Available";
     let restaurantCuisines = responseJson.restaurants[i].restaurant.cuisines;
     $('main').append(`<section class="restaurant-info"><img src="${restaurantPic}" alt="restaurant or meal image" class="restaurant-pic"><div class="restaurant-details"><a href="${restaurantURL}"><h2 class="restaurant-name">${restaurantName}</h2></a><h4 class="cuisine-and-cost">${restaurantCuisines} - Around $${restaurantCost} for 2</h4><h4 class="address">${restaurantAddress}</h4></div></section>`)
   }
