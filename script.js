@@ -52,15 +52,12 @@ function ingFormSubmit() {
 }
 
 function getRandomRecipes() {
-  let randomResults = $('#max-random').val();
   $('main').empty();
   $('main').addClass("recipes");
   $('button').removeClass("hidden");
-  for (let i=0; i<randomResults; i++) {
-    fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
-      .then(response=>response.json())
-      .then(responseJson => displayRandom(responseJson))
-  };
+  fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
+    .then(response=>response.json())
+    .then(responseJson => displayRandom(responseJson))
 }
 
 function displayRandom(responseJson) {
@@ -99,7 +96,9 @@ function displayRandom(responseJson) {
         continue;
       } else if (ingredientsList[i] === "null, null") {
         continue;
-      } else { 
+      } else if (ingredientsList[i] ===",  ") {
+        continue;
+      }  else { 
         $('.ing-list').append(`<li>•${ingredientsList[i]}</li>`)
       }
     }
@@ -128,7 +127,6 @@ function getCoords() {
 }
 
 function passCoords(responseJson) {
-  //console.log(responseJson);
   let coordsLat = responseJson.results[0].geometry.lat;
   let coordsLong = responseJson.results[0].geometry.lng;
   getRestaurants(coordsLat, coordsLong);
@@ -166,6 +164,7 @@ function displayRestaurants(responseJson) {
     let restaurantAddress = responseJson.restaurants[i].restaurant.location.address;
     let restaurantCost = responseJson.restaurants[i].restaurant.average_cost_for_two;
     let restaurantPic = responseJson.restaurants[i].restaurant.thumb;
+    //dummy image "https://dummyimage.com/500x350/000/ffffff&text=Image+Unavailable"
     let restaurantCuisines = responseJson.restaurants[i].restaurant.cuisines;
     $('main').append(`<section class="restaurant-info"><img src="${restaurantPic}" alt="restaurant or meal image" class="restaurant-pic"><div class="restaurant-details"><a href="${restaurantURL}"><h2 class="restaurant-name">${restaurantName}</h2></a><h4 class="cuisine-and-cost">${restaurantCuisines} - Around $${restaurantCost} for 2</h4><h4 class="address">${restaurantAddress}</h4></div></section>`)
   }
