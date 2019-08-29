@@ -20,9 +20,9 @@
         <form id="ingredient-search">
           <fieldset>
             <label for="ingredient">Ingredient:</label>
-            <input type="text" id="ingredient" placeholder="Beef, corn, milk, etc." size=15><br>
+            <input type="text" id="ingredient" placeholder="Broccoli, eggs, beef, etc." size=18><br>
             <label for="max-results">Load</label>
-            <input type="text" id="max-results" value="10" size=1 class="max-return"> recipes<br>
+            <input type="number" id="max-results" value="10" min="1" max="15" size=1 class="max-return"> recipes<br>
           </fieldset>
         <input value="Go!" type="submit" class="submit-button">
         </form>
@@ -33,7 +33,7 @@
         <form id="random-search">
           <fieldset>
             <label for="max-random">Load</label>
-            <input type="text" id="max-random" value="10" size=1 class="max-return"> recipes<br>
+            <input type="number" id="max-random" value="10" max="10" min="1" size=1 class="max-return"> recipes<br>
             <input value="Go!" type="submit" class="submit-button">
           </fieldset>
         </form>
@@ -46,7 +46,7 @@
             <label for="address">Address:</label>
             <input type="text" id="address" placeholder="1234 Main St"><br>
             <label for="max-restaurants">Load</label>
-            <input type="text" id="max-restaurants" value="10" size=1 class="max-return"> restaurants<br>
+            <input type="number" id="max-restaurants" value="10" max="15" min="1" size=1 class="max-return"> restaurants<br>
             <input value="Go!" type="submit" class="submit-button">
           </fieldset>
         </form>
