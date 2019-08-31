@@ -1,5 +1,24 @@
-# First-Capstone - What's For Dinner
+# What's For Dinner
+This app is designed to provide you with dinner options between recipes (either random or searched by ingredient) and local restaurants by utilizing data from 4 different APIs. 
 
-Live URL: https://barbaralois.github.io/First-Capstone/
+## Technologies used
+HTML/CSS, JavaScript, jQuery
 
-This is my first API Hack capstone for Thinkful's Engineering Flex program. The app is designed to provide you with dinner options between recipes (either random or searched by ingredient) and local restaurants.
+##Live Site
+https://barbaralois.github.io/First-Capstone/
+
+##APIs Called by What's For Dinner
+• Edamam's Recipe API
+• TheMealDB.com's random API
+• OpenCage's forward geocoding API
+• Zomato's restaurant API
+
+##Screenshots
+Landing Page
+(https://i.imgur.com/qezCY5L.png)
+
+Recipes
+(https://i.imgur.com/NoLcXpB.png)
+
+Restaurants
+(https://i.imgur.com/m15JE5u.png)
