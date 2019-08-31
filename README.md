@@ -5,7 +5,7 @@ This app is designed to provide you with dinner options between recipes (either 
 HTML/CSS, JavaScript, jQuery
 
 ##Live Site
-https://barbaralois.github.io/First-Capstone/
+https://barbaralois.github.io/Whats-For-Dinner/
 
 ##APIs Called by What's For Dinner
 • Edamam's Recipe API
