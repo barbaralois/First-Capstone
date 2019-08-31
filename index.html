@@ -9,42 +9,42 @@
   </head>
   <body>
     <header>
-      <h1 class="site-title">What's For Dinner?</h1>
-      <h2 class="site-desc">Welcome to What's For Dinner! Here you can search recipes by ingredient, get a list of random recipes, or find nearby restaurants. What's For Dinner will help you find some fresh answers to this age old question, whether you feel like cooking or not. Bon appétit!</h2>
-      <a href="https://barbaralois.github.io/First-Capstone/"><button type="button" alt="Reset the app and return to the first page" class="hidden">Start Over</button></a>
+      <div class="titles"><img src="https://i.imgur.com/K2N2Kv6.png" alt="What's for Dinner title image" class="website-title"></div>
+      <h2 class="site-desc">This app is here to help you find some fresh answers to the age old question of what to eat tonight!</h2>
+      
       <section id="recipe-instructions" class="hidden">
         <p>On this screen you'll see the recipe name, number of servings, and ingredients so you can eyeball whether or not it's something that fits your needs. For specific cooking instructions, click on the recipe name to open the original recipe in a new tab.</p>
       </section>
       <section id="random-instructions" class="hidden">
         <p>On this screen you'll see the recipe name, cuisine type, and ingredients so you can eyeball whether or not it's something that fits your needs. For specific cooking instructions, click on the recipe name to open the original recipe in a new tab.</p>
       </section>
+      <a href="https://barbaralois.github.io/First-Capstone/"><button type="button" alt="Reset the app and return to the first page" class="hidden start-over">Start Over</button></a>
     </header>
     <main>
       <section class="landing-box">
-        <h3>Recipes by Ingredient</h3>
-        <p class="box-descriptions">Have an ingredient you need to use up, or do you want to see what else you can do with your favorite vegetable? Enter it below, choose the maximum number of recipes you want to see, and click go!</p>
+        <div class="titles"><img src="https://i.imgur.com/eUEULul.png?1" class="deco-image"><br><img src="https://i.imgur.com/dRV0Fag.png" class="box-title"></div>
+        <p class="box-descriptions">Do you have an ingredient that you need to use up, or want to see new recipes for your favorite vegetable? Enter it below and click go to get up to 10 new ideas!</p>
         <form id="ingredient-search">
           <fieldset>
             <label for="ingredient">Ingredient:</label>
             <input type="text" id="ingredient" placeholder="Broccoli, eggs, beef, etc." size=18><br>
-            <label for="max-results">Load</label>
-            <input type="number" id="max-results" value="10" min="1" max="15" size=1 class="max-return"> recipes<br>
           </fieldset>
         <input value="Go!" type="submit" class="submit-button">
         </form>
       </section>
       <section class="landing-box">
-        <h3>Random Recipe</h3>
-        <p class="box-descriptions">Feeling adventurous or not sure where to start? Take a look at 10 random recipes to get the inspiration flowing and to help you figure out what you want to make tonight. All you have to do is click go!</p>
+        <div class="titles"><img src="https://i.imgur.com/XDoG2xD.png?1" alt="a plate of food" class="deco-image"><br><img src="https://i.imgur.com/cN99uz5.png" class="box-title"></div>
+        <p class="box-descriptions">Feeling adventurous or not sure where to start? Take a look at 10 random recipes to get the inspiration flowing and to help you figure out what you want to make tonight. Just click go!</p>
         <form id="random-search">
           <fieldset>
+            <p id="random-button">Load 10 random recipes</p>
             <input value="Go!" type="submit" class="submit-button">
           </fieldset>          
         </form>
       </section>
       <section class="landing-box">
-        <h3>Find a Restaurant</h3>
-        <p class="box-descriptions">Don’t feel like standing over the stove? Traveling? Hate doing the dishes? Whatever the reason, enter your address and click go to get up to 10 local suggestions. Maybe you’ll find a new favorite!</p>
+        <div class="titles"><img src="https://i.imgur.com/f74WxDq.png?1" alt="A table with 2 chairs" class="deco-image"><br><img src="https://i.imgur.com/ezjWSDT.png" alt="find a restaurant" class="box-title"></div>
+        <p class="box-descriptions">Don't want to stand over the stove? Traveling? Hate doing the dishes? Enter your address and click go to get up to 10 local suggestions. Maybe you’ll find a new favorite!</p>
         <form id="restaurant-search">
           <fieldset>
             <label for="address">Address:</label>
@@ -53,7 +53,6 @@
           </fieldset>
         </form>
       </section>
-    <a href="https://barbaralois.github.io/First-Capstone/"><button type="button" alt="Reset the app and return to the first page" class="hidden">Start Over</button></a>
     </main>
     <script src="script.js"></script>
   </body>

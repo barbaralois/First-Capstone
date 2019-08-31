@@ -15,7 +15,7 @@ function getIngRecipes() {
   let baseIngURL = "https://api.edamam.com/search?";
   const ingParams = {
     q: $('#ingredient').val(),
-    to: $('#max-results').val(),
+    to: 10,
     app_id: edamamID,
     app_key: edamamKey
   }
@@ -54,7 +54,7 @@ function displayRecipes(responseJson) {
     $('button').removeClass("hidden");
     $('#recipe-instructions').removeClass("hidden");
     for (let i=0; i<recipes.length; i++) {    
-      $('main').append(`<section class="recipe-info"><img src="${recipes[i].recipePic}" alt="recipe picture" class="recipe-pic"><div class="recipe-details"><h3 class="recipe-title"><a href="${recipes[i].recipeURL}" target="_blank">${recipes[i].recipeName}</h3></a><h4 class="servings">${recipes[i].recipeServings} Servings</h4><ul class="ing-list-${i}"></ul></div></section>`);
+      $('main').append(`<section class="recipe-info"><img src="${recipes[i].recipePic}" alt="recipe picture" class="recipe-pic"><div class="recipe-details"><div class="results-header"><h3 class="recipe-title"><a href="${recipes[i].recipeURL}" target="_blank">${recipes[i].recipeName}</h3></a><h4 class="servings">${recipes[i].recipeServings} Servings</h4></div><ul class="ing-list-${i}"></ul></div></section>`);
       for (let j=0; j<recipes[i].ingredientLines.length; j++) {
         let ingItem=recipes[i].ingredientLines[j];
         $(`.ing-list-${i}`).append(`<li>•${ingItem}</li>`)
@@ -78,16 +78,16 @@ function getRandomRecipes() {
   for (let i=0; i<10; i++)
     fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
       .then(response=>response.json())
-      .then(responseJson => displayRandom(responseJson))
+      .then(responseJson => displayRandom(responseJson, i))
 }
 
-function displayRandom(responseJson) {
+function displayRandom(responseJson, recipeNum) {
   let randomTitle = responseJson.meals[0].strMeal;
   let randomImg = responseJson.meals[0].strMealThumb;
   let randomURL = responseJson.meals[0].strSource;
   let randomCuisine = responseJson.meals[0].strArea;
   let randomCategory = responseJson.meals[0].strCategory;
-  $('main').append(`<section class="recipe-info"><img src="${randomImg}" alt="recipe picture" class="recipe-pic"><div class="recipe-details"><h3 class="recipe-title"><a href="${randomURL}" target="_blank">${randomTitle}</h3></a><h4 class="random-info">${randomCuisine} ${randomCategory}</h4><ul class="ing-list"></ul></div></section>`);
+  $('main').append(`<section class="recipe-info"><img src="${randomImg}" alt="recipe picture" class="recipe-pic"><div class="recipe-details"><div class="results-header"><h3 class="recipe-title"><a href="${randomURL}" target="_blank">${randomTitle}</h3></a><h4 class="random-info">${randomCuisine} ${randomCategory}</h4></div><ul class="ing-list-${recipeNum}"></ul></div></section>`);
   function organizeIng(responseJson) {
     const ingredientsList = [];
       for (let i=0; i <= 20; i++) {
@@ -106,7 +106,7 @@ function displayRandom(responseJson) {
       }  else if (ingredientsList[i] === "undefined, undefined") {
         continue;
         } else { 
-        $('.ing-list').append(`<li>•${ingredientsList[i]}</li>`)
+        $(`.ing-list-${recipeNum}`).append(`<li>•${ingredientsList[i]}</li>`)
       }
     }
   }
@@ -142,7 +142,6 @@ function passCoords(responseJson) {
 function getRestaurants(latitude, longitude) {
   let baseZomatoURL = "https://developers.zomato.com/api/v2.1/geocode?"
   const zomatoParams = {
-    //count: $('#max-restaurants').val(),
     lat: latitude,
     lon: longitude
   };
@@ -171,7 +170,7 @@ function displayRestaurants(responseJson) {
       let restaurantCost = responseJson.nearby_restaurants[i].restaurant.average_cost_for_two;
       let restaurantPic = responseJson.nearby_restaurants[i].restaurant.thumb || "https://dummyimage.com/500x350/000/ffffff&text=No+Image+Available";
       let restaurantCuisines = responseJson.nearby_restaurants[i].restaurant.cuisines;
-      $('main').append(`<section class="restaurant-info"><img src="${restaurantPic}" alt="restaurant or meal image" class="restaurant-pic"><div class="restaurant-details"><a href="${restaurantURL}"><h2 class="restaurant-name">${restaurantName}</h2></a><h4 class="cuisine-and-cost">${restaurantCuisines} - Around $${restaurantCost} for 2</h4><h4 class="address">${restaurantAddress}</h4></div></section>`)
+      $('main').append(`<section class="restaurant-info"><img src="${restaurantPic}" alt="restaurant or meal image" class="restaurant-pic"><div class="restaurant-details"><div class="results-header"><a href="${restaurantURL}"><h2 class="restaurant-name">${restaurantName}</h2></a><h4 class="cuisine-and-cost">${restaurantCuisines} - Around $${restaurantCost} for 2</h4><h4 class="address">${restaurantAddress}</h4></div></div></section>`)
     }
   }
 }
