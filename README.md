@@ -4,21 +4,21 @@ This app is designed to provide you with dinner options between recipes (either 
 ## Technologies used
 HTML/CSS, JavaScript, jQuery
 
-##Live Site
+## Live Site
 https://barbaralois.github.io/Whats-For-Dinner/
 
-##APIs Called by What's For Dinner
-• Edamam's Recipe API
-• TheMealDB.com's random API
-• OpenCage's forward geocoding API
-• Zomato's restaurant API
+## APIs Called by What's For Dinner
+* Edamam's Recipe API
+* TheMealDB.com's random API
+* OpenCage's forward geocoding API
+* Zomato's restaurant API
 
-##Screenshots
+## Screenshots
 Landing Page
-(https://i.imgur.com/qezCY5L.png)
+![Landing Page](https://i.imgur.com/qezCY5L.png)
 
 Recipes
-(https://i.imgur.com/NoLcXpB.png)
+![Recipes Page](https://i.imgur.com/NoLcXpB.png)
 
 Restaurants
-(https://i.imgur.com/m15JE5u.png)
+![Restaurants Page](https://i.imgur.com/m15JE5u.png)
